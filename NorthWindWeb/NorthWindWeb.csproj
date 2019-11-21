@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <EnableDefaultRazorTargetAssemblyInfoAttributes>false</EnableDefaultRazorTargetAssemblyInfoAttributes>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Part3\NorthwindWeb\" />
+    <Folder Include="wwwroot\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Pages\index.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.1.2" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.1.14" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="2.1.14" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="Part3\NorthwindContextLib\NorthwindContextLib.csproj" />
+  </ItemGroup>
+
+</Project>

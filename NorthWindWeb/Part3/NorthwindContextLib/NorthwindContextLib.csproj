@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <EnableDefaultRazorTargetAssemblyInfoAttributes>false</EnableDefaultRazorTargetAssemblyInfoAttributes>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.1.14" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="2.1.14" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\NorthWindEntitiesLib\NorthWindEntitiesLib.csproj" />
+  </ItemGroup>
+
+
+</Project>
