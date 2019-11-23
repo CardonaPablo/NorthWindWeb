@@ -1,7 +1,11 @@
 ﻿@page
 @model WebApplication1.Pages.SuppliersModel
 @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
-<div class="row">
+<div class="row my-4">
+    <div class="col-6">
+        <h1 class="display-2">Suppliers</h1>
+    </div>
+    <div class="col-6">
     <p class="lead mr-2">Enter a name for a new supplier:</p>
     <form method="POST">
         <div>
@@ -9,23 +13,24 @@
         </div>
         <input type="submit" class="btn btn-primary mt-2" />
     </form>
+    </div>
 </div>
 <div class="row">
-    <h1 class="display-2">Suppliers</h1>
-    <table class="table">
-        <thead class="thead-inverse">
-            <tr>
-                <th>Company Name</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (string name in Model.Suppliers)
-            {
+    <div class="col-12">
+        <table class="table">
+            <thead class="thead-inverse thead-dark">
                 <tr>
-                    <td>@name</td>
+                    <th>Company Name</th>
                 </tr>
-            }
-        </tbody>
-    </table>
+            </thead>
+            <tbody>
+                @foreach (string name in Model.Suppliers)
+                {
+                    <tr>
+                        <td>@name</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
 </div>
-

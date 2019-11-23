@@ -13,7 +13,7 @@ namespace WebApplication1.Pages
 {
     public class SuppliersModel : PageModel
     {
-        public IEnumerable<string> Suppliers { get; set; }
+        public IList<string> Suppliers { get; set; }
         private Northwind db;
         [BindProperty] public Supplier Supplier { get; set; }
         public SuppliersModel(Northwind injectedContext)
@@ -26,26 +26,17 @@ namespace WebApplication1.Pages
             Suppliers = db.Suppliers.Select(s => s.CompanyName).ToArray();
         }
 
-        [HttpPost]
-        public IActionResult onPost()
+        public async Task<IActionResult> OnPostAsync()
         {
-            try
+            if (!ModelState.IsValid)
             {
-            if (ModelState.IsValid)
-                {
-                    db.Suppliers.Add(Supplier);
-                    db.SaveChanges();
-                }
-            }
-            catch (DbUpdateException /* ex */)
-            {
-                //Log the error (uncomment ex variable name and write a log.
-                ModelState.AddModelError("", "Unable to save changes. " +
-                    "Try again, and if the problem persists " +
-                    "see your system administrator.");
+                return Page();
             }
 
-            return RedirectToPage("/suppliers");
+            db.Suppliers.Add(Supplier);
+            await db.SaveChangesAsync();
+
+            return RedirectToPage("./suppliers");
         }
     }
 }
