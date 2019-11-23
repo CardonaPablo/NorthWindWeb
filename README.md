@@ -42,6 +42,11 @@ Aqui una lista de los paquetes por proyecto:
 * Microsoft.EntityFrameworkCore.Relational en su Versión 2.1.14
 * Microsoft.NetCore.App (Por defecto)
 
+# Documentaciones Útiles
+
+https://docs.microsoft.com/en-us/aspnet/core/tutorials/razor-pages/sql?view=aspnetcore-2.1&tabs=visual-studio
+https://docs.microsoft.com/en-us/aspnet/core/tutorials/razor-pages/page?view=aspnetcore-2.1&tabs=visual-studio
+Asegurense de que en la seleccion de versión este en NETCore 2.1 
 
 # Como descargar este repositorio para probarlo?
 Deben instalar Git en su computadora, es bastante ligero pueden hacerlo desde [este link](https://git-scm.com/downloads).  
